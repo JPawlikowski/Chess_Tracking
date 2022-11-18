@@ -24,4 +24,15 @@ Rapid 10,2022-10-23,22:30,L,656,644,White,"Winning, missplay near the end"
 Rapid 10,2022-10-23,22:50,L,644,636,Black,Total loss
 Rapid 10,2022-10-23,23:05,L,636,626,White,Missclick
 Rapid 10,2022-10-23,23:09,L,626,618,White,"Total loss, early queen attack"
-Rapid 10,2022-10-23,23:17,W,618,625,B;ack,Easy Win
+Rapid 10,2022-10-23,23:17,W,618,625,Black,Easy Win
+Rapid 10,2022-11-07,21:45,W,625,635,White,"London open, slow mid game, resigned"
+Rapid 10,2022-11-07,21:49,L,635,625,White,"London open, slow mid game, lost at the end with time"
+Rapid 10,2022-11-16,20:56,W,625,625,White,Aborted
+Rapid 10,2022-11-16,20:59,L,625,616,Black,"London variant openning, blundered a fork, lost on time in defence"
+Blitz 5,2022-11-17,20:20,L,878,745,White,"Close, lost near the end kings and pawns"
+Blitz 5,2022-11-17,20:26,L,745,672,White,Early attack lost too much material
+Blitz 5,2022-11-17,20:33,L,672,598,White,Even game
+Blitz 5,2022-11-17,20:38,W,643,598,White,Aggressive early Mate with Queen+bishop pin
+Blitz 5,2022-11-17,20:44,W,642,697,Black,"Opponent strted with hard queen B2, won mid game by opponent blunder e file rook"
+Blitz 5,2022-11-17,20:52,W,697,746,Black,"Close gane, down to endgame won with 17 seconds on time and pressure wth rooks"
+Blitz 5,2022-11-17,20:55,L,746,716,Black,"Good start, blunder mid game"
