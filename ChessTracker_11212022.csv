@@ -1,0 +1,43 @@
+Gamemode,Date,Time,Result,Score Before,Score After,Start Color,Comments
+Rapid-10,2022-10-13,20:38,L,773,758,Black,Took early damage from queen
+Rapid-10,2022-10-13,20:56,L,758,742,Black,
+Rapid-10,2022-10-13,21:06,L,742,721,White,"Winning, lost at end due to time"
+Rapid-10,2022-10-13,21:56,L,721,683,Black,"Winning, lost at end due to time"
+Rapid-10,2022-10-13,22:06,W,683,700,White,"Earlier pressure with queen, finish with rooks"
+Rapid-10,2022-10-13,22:46,L,700,686,Black,Won but last move lost time
+Rapid-10,2022-10-13,23:06,W,686,700,Black,Stable pressure win
+Rapid-10,2022-10-14,22:30,L,700,682,White,"Even end game, missclicked a rook"
+Blitz-5,2022-10-14,22:40,L,1000,878,Black,
+Rapid-10,2022-10-14,22:52,W,682,699,White,Easy win
+Rapid-10,2022-10-22,20:33,L,699,669,Black,Total loss
+Rapid-10,2022-10-22,20:52,W,669,681,White,Easy Win
+Rapid-10,2022-10-22,21:05,L,681,658,Black,"Even Game, oponnent starts kings pawn + 2"
+Rapid-10,2022-10-22,21:29,W,658,669,Black,"Buddy disconnected, opponent starts kings pawn + 2"
+Rapid-10,2022-10-22,21:33,W,669,680,Black,"Buddy resigned turn 2, opponent starts king pawn + 2"
+Rapid-10,2022-10-22,21:38,L,680,671,Black,"Opponent starts queen pawn + 2, got a call during the game"
+Rapid-10,2022-10-22,22:15,L,671,659,Black,Total loss
+Rapid-10,2022-10-22,22:20,L,659,646,Black,Missclick
+Rapid-10,2022-10-22,22:30,L,646,634,Black,Missclick
+Rapid-10,2022-10-23,22:15,W,634,643,White,Solid Win
+Rapid-10,2022-10-23,22:24,W,643,656,Black,Solid win
+Rapid-10,2022-10-23,22:30,L,656,644,White,"Winning, missplay near the end"
+Rapid-10,2022-10-23,22:50,L,644,636,Black,Total loss
+Rapid-10,2022-10-23,23:05,L,636,626,White,Missclick
+Rapid-10,2022-10-23,23:09,L,626,618,White,"Total loss, early queen attack"
+Rapid-10,2022-10-23,23:17,W,618,625,Black,Easy Win
+Rapid-10,2022-11-07,21:45,W,625,635,White,"London open, slow mid game, resigned"
+Rapid-10,2022-11-07,21:49,L,635,625,White,"London open, slow mid game, lost at the end with time"
+Rapid-10,2022-11-16,20:56,W,625,625,White,Aborted
+Rapid-10,2022-11-16,20:59,L,625,616,Black,"London variant openning, blundered a fork, lost on time in defence"
+Blitz-5,2022-11-17,20:20,L,878,745,White,"Close, lost near the end kings and pawns"
+Blitz-5,2022-11-17,20:26,L,745,672,White,Early attack lost too much material
+Blitz-5,2022-11-17,20:33,L,672,598,White,Even game
+Blitz-5,2022-11-17,20:38,W,643,598,White,Aggressive early Mate with Queen+bishop pin
+Blitz-5,2022-11-17,20:44,W,642,697,Black,"Opponent strted with hard queen B2, won mid game by opponent blunder e file rook"
+Blitz-5,2022-11-17,20:52,W,697,746,Black,"Close gane, down to endgame won with 17 seconds on time and pressure wth rooks"
+Blitz-5,2022-11-17,20:55,L,746,716,Black,"Good start, blunder mid game"
+Blitz-5,2022-11-17,23:45,W,716,751,Black,"London start, weak midgame, won on time"
+Blitz-5,2022-11-17,23:55,L,751,721,Black,"Winning, blunder at the end lost near time"
+Blitz-5,2022-11-20,15:02,L,721,690,Black,"Was playing behind entire game, too many trades"
+Blitz-5,2022-11-20,15:08,L,690,668,White,"Opponent pushed really fast, no chance"
+Blitz-5,2022-11-20,15:15,W,668,689,White,"Even game, won at the end with time and pressure"
