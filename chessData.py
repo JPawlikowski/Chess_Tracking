@@ -6,7 +6,7 @@ from pullTrackerData import getTrackerDataEloFunc
 
 #exit()
 
-csv_file = './ChessTracker_11212022.csv'
+csv_file = './ChessTracker_11272022.csv'
 print('Reading csv :' + csv_file)
 
 game_type = 'Blitz-5'
@@ -14,21 +14,31 @@ game_type = 'Blitz-5'
 dt = datetime.now()
 current_time = dt.strftime("%Y%m%d%H%M")
 
-current_graph_name = str('./graphs/Elo_chart_' + game_type + current_time + '.png')
+plot_graph_name = str('./graphs/Elo_plot_' + game_type + '_' + current_time + '.png')
+pie_graph_name = str('./graphs/Elo_pie_' + game_type + '_' + current_time + '.png')
 
 elo_befores = []
 game_starts = []
+win_loss = []
 
-plt.ylabel('Elo')
-plt.title(game_type + ' Ranking')
-plt.xlabel('Game played')
+fig, ax = plt.subplots()
+ax.set_title("Overall " + game_type + "Elo")
 
-elo_befores, game_starts = getTrackerDataEloFunc(csv_file, game_type)
+#Pull data from csv
+elo_befores, game_starts, win_loss = getTrackerDataEloFunc(csv_file, game_type)
 
-plt.plot(game_starts, elo_befores)
-plt.xticks(rotation=90)
+#win_loss = [wins, total_games-wins]
+
+ax.plot(game_starts, elo_befores)
+plt.xticks(rotation=70)
 plt.tight_layout()
-#plt.ylim([500,1100])
-plt.show()
 
-plt.savefig(current_graph_name, dpi=None, facecolor='w', edgecolor='w', orientation='portrait', format=None, transparent=False, bbox_inches=None, pad_inches=0.5, metadata=None)
+plt.savefig(plot_graph_name, dpi=None, facecolor='w', edgecolor='w', orientation='portrait', format=None, transparent=False, bbox_inches=None, pad_inches=0.5, metadata=None)
+
+fig1, ax1 = plt.subplots()
+ax1.set_title("Win-Loss Overall " + game_type)
+pie_labels = ('Wins', 'Losses')
+ax1.pie(win_loss, labels=pie_labels, startangle=90, autopct='%1.1f%%')
+ax1.axis('equal')
+
+plt.savefig(pie_graph_name, dpi=None, facecolor='w', edgecolor='w', orientation='portrait', format=None, transparent=False, bbox_inches=None, pad_inches=0.5, metadata=None)
