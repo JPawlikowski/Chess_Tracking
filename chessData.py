@@ -4,9 +4,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 from pullTrackerData import getTrackerDataEloFunc
 
-#exit()
-
-csv_file = './ChessTracker_11272022.csv'
+csv_file = './ChessTracker_11302022.csv'
 print('Reading csv :' + csv_file)
 
 game_type = 'Blitz-5'
@@ -22,13 +20,11 @@ game_starts = []
 win_loss = []
 
 fig, ax = plt.subplots()
-ax.set_title("Overall " + game_type + "Elo")
+ax.set_title("Overall " + game_type + " Elo")
 
 #Pull data from csv
 elo_befores, game_starts, win_loss = getTrackerDataEloFunc(csv_file, game_type)
-
-#win_loss = [wins, total_games-wins]
-
+ax.set_ylabel('Elo')
 ax.plot(game_starts, elo_befores)
 plt.xticks(rotation=70)
 plt.tight_layout()
