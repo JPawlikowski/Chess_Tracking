@@ -16,7 +16,7 @@ def createPlotFunc(plt, plot_graph_name, plot_title, x_data, y_data, x_label, y_
     except:
         print('An issue found saving plot graph : ' + pie_graph_name)
         return 1
-    print('Done.. -> '+ plot_graph_name)
+    print('Done.. -> '+ plot_graph_name + '\n')
     return 0
 
 
@@ -37,5 +37,5 @@ def createPieFunc(plt, pie_graph_name, pie_title, data, pie_labels):
         print('An issue found saving pie graph : ' + pie_graph_name)
         return 1
 
-    print('Done.. -> ' + pie_graph_name)
+    print('Done.. -> ' + pie_graph_name + '\n')
     return 0
