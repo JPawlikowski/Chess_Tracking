@@ -5,6 +5,7 @@ def getTrackerDataEloFunc(csv_file, game_type):
     elo_befores = []
     game_starts = []
     win_loss_str = []
+    black_white_src = []
     print('in function call')
     with open(csv_file) as csvfile:
         spamreader = csv.reader(csvfile)
@@ -13,6 +14,7 @@ def getTrackerDataEloFunc(csv_file, game_type):
                 elo_befores.append(int(row[4]))
                 game_starts.append(str(row[1]) + ' ' + str(row[2]))
                 win_loss_str.append(str(row[3]))
+                black_white_src.append(str(row[6]))
             
     #print elo summary
     for i in range(0, len(elo_befores)):
@@ -25,5 +27,26 @@ def getTrackerDataEloFunc(csv_file, game_type):
             wins = wins + 1
     win_loss = (wins, len(win_loss_str)-wins)
 
-    return elo_befores, game_starts, win_loss
+    #should be able to combine the below with above loop
+    white_wins = 0
+    black_wins = 0
+    white_losses = 0
+    black_losses = 0
+    for j in range(0, len(black_white_src)):
+        if ((black_white_src[j].lower() == 'white')):
+            if (win_loss_str[j].lower() == 'w'):
+                white_wins = white_wins + 1
+            else:
+                white_losses = white_losses + 1
+        elif ((black_white_src[j].lower() == 'black')):
+            if (win_loss_str[j].lower() == 'w'):
+                black_wins = black_wins + 1
+            else:
+                black_losses = black_losses + 1
+        elif ((black_white_src[j].lower() != 'white') or (black_white_src[j].lower() != 'black')):
+            print("Error found at row " + str(j) + ", colour not matched as either white or black")
+    black_white_score = [white_wins, white_losses, black_wins, black_losses]
+
+
+    return elo_befores, game_starts, win_loss, black_white_score
 
