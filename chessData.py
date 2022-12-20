@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from pullTrackerData import getTrackerDataEloFunc
 from plotCreates import createPieFunc, createPlotFunc
 
-csv_file = './ChessTracker_11302022.csv'
+csv_file = './ChessTracker_12192022.csv'
 print('Reading csv :' + csv_file)
 
 game_type = 'Blitz-5'
@@ -34,16 +34,16 @@ currentPlotStatus = createPlotFunc(plt, plot_graph_name, plot_title, game_starts
 
 #Create pie for overall win-loss
 pie_title = "Win-Loss Overall " + game_type
-pie_labels = ['Wins', 'Losses']
+pie_labels = ['Wins', 'Stale_Mates', 'Losses']
 currentPieStatus = createPieFunc(plt, pie_graph_name, pie_title, win_loss, pie_labels)
 
 #Create pie for black-white games played
 bw_games_pie_title = "Black & White Game Ratio " + game_type
 bw_games_pie_labels = ['White_Games', 'Black_Games']
-bw_games = [bw_score[0]+bw_score[1], bw_score[2]+bw_score[2]]
+bw_games = [bw_score[0]+bw_score[1]+bw_score[2], bw_score[3]+bw_score[4]+bw_score[5]]
 currentPieStatus = createPieFunc(plt, bw_games_pie_graph_name, bw_games_pie_title, bw_games, bw_games_pie_labels)
 
 #Create pie for black-white win loss
 bw_score_pie_title = "Black & White Win-Loss " + game_type
-bw_score_pie_labels = ['White_Wins', 'White_Losses', 'Black_Wins', 'Black_Losses']
+bw_score_pie_labels = ['White_Wins', 'White_Losses', 'White_Stale_Mates', 'Black_Wins', 'Black_Stale_Mates', 'Black_Losses']
 currentPieStatus = createPieFunc(plt, bw_score_pie_graph_name, bw_score_pie_title, bw_score, bw_score_pie_labels)
