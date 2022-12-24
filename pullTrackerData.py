@@ -1,5 +1,6 @@
 
 import csv
+from datetime import datetime
 
 def getTrackerDataEloFunc(csv_file, game_type):
     elo_befores = []
@@ -13,6 +14,10 @@ def getTrackerDataEloFunc(csv_file, game_type):
             if (row[0].startswith(game_type) ):
                 elo_befores.append(int(row[4]))
                 game_starts.append(str(row[1]) + ' ' + str(row[2]))
+                #current_game_start_str = str(row[1]) + ' ' + str(row[2])
+                #current_game_start = datetime.strptime(current_game_start_str, '%Y-%m-%d %H:%M')
+                #game_starts.append(current_game_start)
+                #datetime = datetime.strptime(date_string, '%Y-%m-%d %H:%M')
                 win_loss_str.append(str(row[3]))
                 black_white_src.append(str(row[6]))
             

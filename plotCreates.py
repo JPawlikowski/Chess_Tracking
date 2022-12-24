@@ -1,9 +1,11 @@
+from matplotlib.ticker import MultipleLocator
 
 def createPlotFunc(plt, plot_graph_name, plot_title, x_data, y_data, x_label, y_label):
     print('Creating plot..')
     fig, ax = plt.subplots()
     ax.set_title(plot_title)
     ax.set_ylabel(y_label)
+    ax.xaxis.set_major_locator(MultipleLocator(5))
     plt.xticks(rotation=70)
     try:
         ax.plot(x_data, y_data)
@@ -16,6 +18,7 @@ def createPlotFunc(plt, plot_graph_name, plot_title, x_data, y_data, x_label, y_
     except:
         print('An issue found saving plot graph : ' + pie_graph_name)
         return 1
+    
     print('Done.. -> '+ plot_graph_name + '\n')
     return 0
 
