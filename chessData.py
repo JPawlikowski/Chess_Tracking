@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 from pullTrackerData import getTrackerDataEloFunc
 from plotCreates import createPieFunc, createPlotFunc
 
-csv_file = './ChessTracker_12232022.csv'
+csv_file = './ChessTracker_12312022.csv'
 print('Reading csv :' + csv_file)
 
-game_type = 'Blitz-5'
+game_type = 'Blitz'
 
 dt = datetime.now()
 current_time = dt.strftime("%Y%m%d%H%M")
@@ -25,13 +25,14 @@ win_loss = []
 bw_score = []
 
 #Pull data from csv into objects
-elo_befores, game_starts, win_loss, bw_score = getTrackerDataEloFunc(csv_file, game_type)
+game_type_id, elo_befores, game_starts, win_loss, bw_score = getTrackerDataEloFunc(csv_file, game_type)
+print(str(game_type_id))
 print(str(bw_score))
 print(str(game_starts))
 
 #Create plot for overall Elo over time
 plot_title = "Overall " + game_type + " Elo"
-currentPlotStatus = createPlotFunc(plt, plot_graph_name, plot_title, game_starts, elo_befores, 'Game Dttm', 'Elo')
+currentPlotStatus = createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, game_starts, elo_befores, 'Game Dttm', 'Elo')
 
 #Create pie for overall win-loss
 pie_title = "Win-Loss Overall " + game_type

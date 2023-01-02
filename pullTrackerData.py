@@ -7,11 +7,23 @@ def getTrackerDataEloFunc(csv_file, game_type):
     game_starts = []
     win_loss_str = []
     black_white_src = []
+    game_type_dtl = ""
+    game_type_id = []
     print('in function call')
     with open(csv_file) as csvfile:
         spamreader = csv.reader(csvfile)
         for row in spamreader:
             if (row[0].startswith(game_type) ):
+                if (row[0] == "Blitz-5"):
+                    game_type_id.append(1)
+                elif (row[0] == "Blitz-3"):
+                    game_type_id.append(2)
+                elif (row[0] == "Blitz-3-2"):
+                    game_type_id.append(3)
+                else:
+                    print("Warning: game type id for blitz not found")
+                    game_type_id.append(0)
+
                 elo_befores.append(int(row[4]))
                 game_starts.append(str(row[1]) + ' ' + str(row[2]))
                 #current_game_start_str = str(row[1]) + ' ' + str(row[2])
@@ -60,5 +72,5 @@ def getTrackerDataEloFunc(csv_file, game_type):
     black_white_score = [white_wins, white_losses, white_stalemates, black_wins, black_stalemates, black_losses]
     win_loss = [white_wins+black_wins, white_stalemates+black_stalemates, white_losses+black_losses]
 
-    return elo_befores, game_starts, win_loss, black_white_score
+    return game_type_id, elo_befores, game_starts, win_loss, black_white_score
 
