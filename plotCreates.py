@@ -7,36 +7,82 @@ def createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, x_data, y_dat
     ax.set_ylabel(y_label)
     ax.xaxis.set_major_locator(MultipleLocator(5))
     #game id 1 data
-    index_1 = []
+    index_1_start = 0
+    index_1_end = 0
+    index_1_pairs = []
     index_2 = []
     #index_3 = []
-    for i in range(0, len(game_type_id)):
+    """
+    for i in range(0, len(game_type_id)-1):
         if game_type_id[i] == 1:
-            index_1.append(i)
+            index_1_start = i
+            index_1_end = i
+            while game_type_id[i] == 1:
+                index_1_end = i
+                i = i+1
+            ax.plot(x_data[index_1_start:index_1_end], y_data[index_1_start:index_1_end], color="blue")
+            print(index_1_start)
+            print(index_1_end)
+            
         elif game_type_id[i] == 2:
             index_2.append(i)
         #elif game_type_id[i] == 3:
             #index_3.append(i)
         else:
             print("Warning, issue with index data split")
+    """
+    print('game type id length : ' + str(len(game_type_id)))
+    i = 0
+    print(str(game_type_id[len(game_type_id)-1]))
+    while i < len(game_type_id)-1:
+        if game_type_id[i] == 1:
+            index_1_start = i
+            index_1_end = i
+            while game_type_id[i] == 1:
+                print(i)
+                if (i == len(game_type_id)-1):
+                    break
+                else:
+                    i = i + 1
+                    index_1_end = i
+            print("Plotting 1s: ")
+            print(index_1_start)
+            print(index_1_end)
+            try:
+                ax.plot(x_data[index_1_start:index_1_end], y_data[index_1_start:index_1_end], color="blue")
+            except:
+                print('Issue found plotting : ' + plot_title)
+                return 1
+            if (i < len(game_type_id)-1):
+                i = i + 1
+            else:
+                break
+            print("end of first loop i :" + str(i))
+        elif game_type_id[i] == 2:
+            index_2_start = i
+            index_2_end = i
+            while game_type_id[i] == 2:
+                if (i == len(game_type_id)-1):
+                    break
+                else:
+                    i = i + 1
+                    index_2_end = i
+            print("Plotting 2s: ")
+            print(index_2_start)
+            print(index_2_end)
+            try:
+                ax.plot(x_data[index_2_start:index_2_end], y_data[index_2_start:index_2_end], color="green")
+            except:
+                print('Issue found plotting : ' + plot_title)
+                return 1
+            if (i < len(game_type_id)-1):
+                i = i + 1
+            else:
+                break
+        else:
+            print("loop bottom")
 
-    
-    x_data_1=list(map(x_data.__getitem__, index_1))
-    y_data_1=list(map(y_data.__getitem__, index_1))
-    x_data_2=list(map(x_data.__getitem__, index_2))
-    y_data_2=list(map(y_data.__getitem__, index_2))
-    #x_data_3=list(map(x_data.__getitem__, index_3))
-
-    print(str(x_data_1))
     plt.xticks(rotation=70)
-    try:
-        #Issue here, need to plot only consistent sets of games per type
-        ax.plot(x_data_1, y_data_1, color="blue")
-        ax.plot(x_data_2, y_data_2, color="green")
-        #ax.plot(x_data_3, y_data, color="red")
-    except:
-        print('Issue found plotting : ' + plot_title)
-        return 1
     ax.legend(["Blitz-5", "Blitz-3"])
     plt.tight_layout()
     try:
