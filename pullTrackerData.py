@@ -34,8 +34,8 @@ def getTrackerDataEloFunc(csv_file, game_type):
                 black_white_src.append(str(row[6]))
             
     #print elo summary
-    for i in range(0, len(elo_befores)):
-        print(str(game_starts[i]) + ', ' + str(elo_befores[i]))
+    #for i in range(0, len(elo_befores)):
+        #print(str(game_starts[i]) + ', ' + str(elo_befores[i]))
 
     #Convert wins and losses strings to numbers, no longer needed, can pull from below
     #wins = 0
@@ -49,8 +49,8 @@ def getTrackerDataEloFunc(csv_file, game_type):
     black_wins = 0
     white_losses = 0
     black_losses = 0
-    white_stalemates = 0
-    black_stalemates = 0
+    white_draws = 0
+    black_draws = 0
     for j in range(0, len(black_white_src)):
         if ((black_white_src[j].lower() == 'white')):
             if (win_loss_str[j].lower() == 'w'):
@@ -58,19 +58,19 @@ def getTrackerDataEloFunc(csv_file, game_type):
             elif (win_loss_str[j].lower() == 'l'):
                 white_losses = white_losses + 1
             else:
-                white_stalemates = white_stalemates + 1
+                white_draws = white_draws + 1
         elif ((black_white_src[j].lower() == 'black')):
             if (win_loss_str[j].lower() == 'w'):
                 black_wins = black_wins + 1
             elif (win_loss_str[j].lower() == 'l'):
                 black_losses = black_losses + 1
             else:
-                black_stalemates = black_stalemates + 1
+                black_draws = black_draws + 1
         elif ((black_white_src[j].lower() != 'white') or (black_white_src[j].lower() != 'black')):
             print("Error found at row " + str(j) + ", colour not matched as either white or black")
 
-    black_white_score = [white_wins, white_losses, white_stalemates, black_wins, black_stalemates, black_losses]
-    win_loss = [white_wins+black_wins, white_stalemates+black_stalemates, white_losses+black_losses]
+    black_white_score = [white_wins, white_losses, white_draws, black_wins, black_draws, black_losses]
+    win_loss = [white_wins+black_wins, white_draws+black_draws, white_losses+black_losses]
 
     return game_type_id, elo_befores, game_starts, win_loss, black_white_score
 

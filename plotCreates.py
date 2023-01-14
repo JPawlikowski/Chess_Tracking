@@ -9,45 +9,28 @@ def createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, x_data, y_dat
     #game id 1 data
     index_1_start = 0
     index_1_end = 0
-    index_1_pairs = []
-    index_2 = []
-    #index_3 = []
-    """
-    for i in range(0, len(game_type_id)-1):
-        if game_type_id[i] == 1:
-            index_1_start = i
-            index_1_end = i
-            while game_type_id[i] == 1:
-                index_1_end = i
-                i = i+1
-            ax.plot(x_data[index_1_start:index_1_end], y_data[index_1_start:index_1_end], color="blue")
-            print(index_1_start)
-            print(index_1_end)
-            
-        elif game_type_id[i] == 2:
-            index_2.append(i)
-        #elif game_type_id[i] == 3:
-            #index_3.append(i)
-        else:
-            print("Warning, issue with index data split")
-    """
+    index_2_start = 0
+    index_2_end = 0
+    index_3_start = 0
+    index_3_end = 0
+    
     print('game type id length : ' + str(len(game_type_id)))
     i = 0
     print(str(game_type_id[len(game_type_id)-1]))
     while i < len(game_type_id)-1:
+        print(str(i) + " " + str(game_type_id[i]))
         if game_type_id[i] == 1:
             index_1_start = i
             index_1_end = i
             while game_type_id[i] == 1:
-                print(i)
                 if (i == len(game_type_id)-1):
                     break
                 else:
                     i = i + 1
                     index_1_end = i
-            print("Plotting 1s: ")
-            print(index_1_start)
-            print(index_1_end)
+            print("Plotting 1s: (Blitz-5)")
+            print("from: " + str(index_1_start))
+            print("to: " + str(index_1_end))
             try:
                 ax.plot(x_data[index_1_start:index_1_end], y_data[index_1_start:index_1_end], color="blue")
             except:
@@ -67,9 +50,9 @@ def createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, x_data, y_dat
                 else:
                     i = i + 1
                     index_2_end = i
-            print("Plotting 2s: ")
-            print(index_2_start)
-            print(index_2_end)
+            print("Plotting 2s: (Blitz-3)")
+            print("from: " + str(index_2_start))
+            print("to: " + str(index_2_end))
             try:
                 ax.plot(x_data[index_2_start:index_2_end], y_data[index_2_start:index_2_end], color="green")
             except:
@@ -79,11 +62,42 @@ def createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, x_data, y_dat
                 i = i + 1
             else:
                 break
+        elif game_type_id[i] == 3:
+            index_3_start = i
+            index_3_end = i
+            while game_type_id[i] == 3:
+                if (i == len(game_type_id)-1):
+                    break
+                else:
+                    i = i + 1
+                    index_3_end = i
+            print("Plotting 3s: (Blitz-3-2)")
+            print("from: " + str(index_3_start))
+            print("to: " + str(index_3_end))
+            try:
+                ax.plot(x_data[index_3_start:index_3_end], y_data[index_3_start:index_3_end], color="red")
+            except:
+                print('Issue found plotting : ' + plot_title)
+                return 1
+            if (i < len(game_type_id)-1):
+                i = i + 1
+            else:
+                break
+        elif (game_type_id[i] == 0):
+            print("game type id during plot create not found (0)")
+            if (i < len(game_type_id)-1):
+                i = i + 1
+            else:
+                break
         else:
-            print("loop bottom")
+            print("Game type not found.. plot creates loop bottom *")
+            if (i < len(game_type_id)-1):
+                i = i + 1
+            else:
+                break
 
     plt.xticks(rotation=70)
-    ax.legend(["Blitz-5", "Blitz-3"])
+    #ax.legend(["Blitz-5", "Blitz-3", "Blitz-3-2"])
     plt.tight_layout()
     try:
         plt.savefig(plot_graph_name, dpi=None, facecolor='w', edgecolor='w', orientation='portrait', format=None, transparent=False, bbox_inches=None, pad_inches=0.5, metadata=None)
