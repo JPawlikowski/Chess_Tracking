@@ -1,11 +1,14 @@
 from matplotlib.ticker import MultipleLocator
 
+#Objective is to split game details data into game types and plot as a combined line
+#Three main game types, currently for Blitz are Blitz-5, Blitz-3 and Blitz-3-2, should be 1 color per line segment on graph
+#Each data section for consecutive same game type games will get plotted as a segment with a "_start" and "_end"
 def createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, x_data, y_data, x_label, y_label):
     print('Creating plot..')
     fig, ax = plt.subplots()
     ax.set_title(plot_title)
     ax.set_ylabel(y_label)
-    ax.xaxis.set_major_locator(MultipleLocator(5))
+    ax.xaxis.set_major_locator(MultipleLocator(8))
     #game id 1 data
     index_1_start = 0
     index_1_end = 0
