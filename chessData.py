@@ -6,7 +6,7 @@ from pullTrackerData import getTrackerDataEloFunc
 from plotCreates import createPieFunc, createPlotFunc
 
 
-csv_file = './ChessTracker_03052023.csv'
+csv_file = './ChessTracker_04212023.csv'
 print('Reading csv :' + csv_file)
 
 game_type = 'Blitz'
