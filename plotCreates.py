@@ -8,7 +8,7 @@ def createPlotFunc(plt, game_type_id, plot_graph_name, plot_title, x_data, y_dat
     fig, ax = plt.subplots()
     ax.set_title(plot_title)
     ax.set_ylabel(y_label)
-    ax.xaxis.set_major_locator(MultipleLocator(8))
+    ax.xaxis.set_major_locator(MultipleLocator(12))
     #game id 1 data
     index_1_start = 0
     index_1_end = 0
