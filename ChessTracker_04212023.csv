@@ -137,7 +137,7 @@ Blitz-5,2022-12-30,14:14,W,597,589,White,Blunder one turn from mate
 Blitz-5,2022-12-30,14:17,W,589,597,White,Opponent resigned after early blunder middle pawn
 Blitz-5,2022-12-30,14:25,L,597,589,White,Total loss
 Blitz-3,2022-12-30,14:38,W,589,596,Black,"Easy win, opponent traded too much"
-Blitz-3,2022-12-30,14:45,L,589,587,Black,Losto n time with 3 seconds left
+Blitz-3,2022-12-30,14:45,L,589,587,Black,Lost on time with 3 seconds left
 Blitz-3,2022-12-30,14:52,L,587,578,Black,"Lost on time, winning game"
 Blitz-3,2022-12-30,14:54,L,578,571,Black,Lost under triple fork
 Blitz-3,2022-12-30,15:00,L,571,563,Black,"Close game, loss on time"
@@ -207,7 +207,7 @@ Blitz-3,2023-01-09,20:23,W,567,573,White,"Close game, win on pressure"
 Blitz-3,2023-01-09,20:29,W,573,582,White,Solid game on pressure
 Blitz-3,2023-01-09,20:34,W,582,591,Black,Solid game on pressure
 Blitz-3,2023-01-09,20:39,W,591,598,White,Game back from a strong attack after opponent blundered Queen
-Blitz-3,2023-01-09,20:46,D,598,600,Stalemate,Dragged out losing situation
+Blitz-3,2023-01-09,20:46,D,598,600,White,Stalemate,Dragged out losing situation
 Blitz-3,2023-01-14,19:50,W,600,609,Black,Opponent lost on time
 Blitz-3,2023-01-14,20:01,L,609,601,Black,"Lost with 1 second left, even game"
 Blitz-3,2023-01-15,21:27,L,591,601,White,Mistake midgame
@@ -481,7 +481,6 @@ Blitz-3,2023-10-14,16:15,W,494,503,White,"Solid game opponent wasted time and I 
 Blitz-3,2023-10-14,16:18,W,503,496,White,"Got second queen late game but ran out of time"
 Blitz-5,2023-10-14,16:25,W,496,503,Black,"Long game won on pressure and pieces late"
 Blitz-5,2023-10-14,22:55,W,503,514,Black,"Long game won on pressure and pieces late"
-Blitz-5,2023-10-14,22:03,W,503,514,Black,"Even game but was losing late with opponent low on time so drew with repeat checks"
 Blitz-5,2023-10-14,22:08,L,514,506,White,"Even game lost on time"
 Blitz-5,2023-10-14,22:15,W,506,513,White,"Late game check mate, made some blunders but pulled it together late"
 Blitz-5,2023-10-23,20:33,L,513,512,Black,"Mid gme blunder bad trade in long mate with rook and pawns"
@@ -489,3 +488,20 @@ Blitz-5,2023-10-23,20:36,L,512,506,White,"Blunder mis mid game"
 Blitz-5,2023-10-23,20:40,W,506,513,White,"Rough long game, opponent couldnt finish"
 Blitz-5,2023-10-23,20:44,W,513,520,Black,"Opponent attacked fast with Queen and lost a lot of pieces then resigned"
 Blitz-5,2023-10-23,20:57,W,520,526,White,"Solid win on pressure and trades"
+Blitz-5,2023-10-23,21:40,L,526,520,Black,"Blunder miss early game"
+Blitz-5,2023-10-23,21:45,L,520,508,Black,"Lost to fork late game"
+Blitz-5,2023-10-23,21:52,L,508,500,Black,"Even game lost to time and pressure late"
+Blitz-3,2023-10-28,11:32,L,500,493,White,"Lost pressure early on"
+Blitz-3,2023-10-29,19:45,L,493,484,White,"Blundered miss take early game"
+Blitz-3,2023-10-29,19:50,W,484,494,Black,"Won on time and opponent missed some hangs"
+Blitz-3,2023-10-29,19:53,L,494,485,Black,"Lost on missed mate early game"
+Blitz-3,2023-10-29,19:59,L,485,476,Black,"Lost pressure late game"
+Blitz-3,2023-11-11,13:42,W,476,484,Black,"Solid win, opponent blundered openning on one side, got a rook on long file"
+Blitz-3,2023-11-11,13:46,W,484,490,Black,"Solid mate on castled king with queen and long bishop"
+Blitz-3,2023-11-11,13:52,L,490,482,White,"Easy loss, lost momentum and made poor trades early on"
+Blitz-3,2023-11-11,13:58,W,482,476,Black,"Even game but wasnt able to finish and lost time mid game"
+Blitz-3,2023-11-20,20:33,W,476,485,Black,"Even game but had slight time advantage and pressure since mid"
+Blitz-3,2023-11-20,20:37,L,485,478,Black,"Lost time and a few bad trades mid game"
+Blitz-3,2023-11-20,20:40,W,478,487,White,"opponent blundered early and resigned"
+Blitz-3,2023-11-26,20:55,W,487,496,White,"opponent blundered mid game with queen and king on same aisle"
+Blitz-3,2023-11-26,20:58,W,496,504,White,"opponent made poor trades and lost material mid game, chased him down with late game ladder for easy W"
